@@ -54,7 +54,7 @@ app.use(helmet({
   contentSecurityPolicy: false  // Disable CSP so React app loads correctly
 }));
 app.use(cors({
-  origin: '*',
+  origin: process.env.CLIENT_URL,
   credentials: true
 }));
 app.use(express.json({ limit: '10kb' }));
